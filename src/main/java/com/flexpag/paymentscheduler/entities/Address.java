@@ -1,5 +1,7 @@
 package com.flexpag.paymentscheduler.entities;
 
+import com.flexpag.paymentscheduler.dto.AddressRegistrationDataDto;
+
 import jakarta.persistence.Embeddable;
 
 import lombok.AllArgsConstructor;
@@ -20,5 +22,17 @@ public class Address {
 	private String uf;
 	private int number;
 	private String Complement;
+	
+	public Address(AddressRegistrationDataDto data) {
+		this.zip = data.zip();
+		this.street = data.street();
+		this.neighborhood =data.neighborhood();
+		this.city = data.city();
+		this.uf = data.uf();
+		this.number = data.number();
+		this.Complement = data.Complement();
+				
+				
+	}
 	
 }

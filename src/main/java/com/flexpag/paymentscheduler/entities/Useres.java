@@ -1,5 +1,7 @@
 package com.flexpag.paymentscheduler.entities;
 
+import com.flexpag.paymentscheduler.dto.UserRegistrationDataDto;
+
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,5 +31,11 @@ public class Useres {
 	@Embedded
 	private Address address;
 	
-	
+	public Useres(UserRegistrationDataDto data) {
+		this.name = data.name();
+		this.email = data.email();
+		this.telephone = data.telephone();
+		this.address = new Address(data.address());
+		
+	}
 }

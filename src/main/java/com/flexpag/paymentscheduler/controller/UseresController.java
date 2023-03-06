@@ -6,20 +6,21 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.flexpag.paymentscheduler.dto.UserRegistrationDataDto;
+import com.flexpag.paymentscheduler.entities.Useres;
 import com.flexpag.paymentscheduler.repository.UseresRepository;
 
 
 @RestController
-@RequestMapping ("/user")
+@RequestMapping ("/useres")
 public class UseresController {
 	
 	@Autowired
 	private UseresRepository repository;
 	
-	
 	@PostMapping
-	public void registerUser(@RequestBody String json) {
-		System.out.println(json);
+	public void registerUser(@RequestBody UserRegistrationDataDto data) {
+		repository.save(new Useres(data));
 	}
 	
 
