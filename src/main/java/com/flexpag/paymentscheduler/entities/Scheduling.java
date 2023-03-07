@@ -13,15 +13,15 @@ import lombok.Data;
 
 
 @Entity
-@Table (name = "pending")
+@Table (name = "scheduling")
 @Data
-public class pending {
+public class Scheduling {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY )
 	private long id;
-	
 	private Date scheduling;
 	@Enumerated(EnumType.STRING)
-	private StatusPending statusPending = StatusPending.PENDING ;
+	private StatusScheduling statusScheduling = StatusScheduling.PENDING ;
+	
 	
 }

@@ -1,0 +1,16 @@
+http://localhost:8080/useres
+
+{
+"name": "Vinicius Muliterno",
+"email": "viniciusmuliterno@hotmail.com",
+"telephone": "81989795828",
+"address": {
+    "street": "rua 1",
+    "neighborhood": "bairro",
+    "zip": "12345678",
+    "city": "Brasilia",
+    "uf": "DF",
+    "number": "1",
+    "Complement": "complemento"
+    }
+}

@@ -1,6 +1,6 @@
 package com.flexpag.paymentscheduler.entities;
 
-public enum StatusPending {
+public enum StatusScheduling {
 	
 	PENDING,
 	PAIND;

@@ -15,12 +15,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Address {
 	
-	private long zip;
+	private String zip;
 	private String street;
 	private String neighborhood;
 	private String city;
 	private String uf;
-	private int number;
+	private String number;
 	private String Complement;
 	
 	public Address(AddressRegistrationDataDto data) {
